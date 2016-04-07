@@ -11,4 +11,4 @@
             title: oldHover + ' [ dealer will earn: $' + formatNumber(earningAfterTax) + ' ]'
         });
     });
-})(jQuery, 33);
+})(jQuery, 15);
