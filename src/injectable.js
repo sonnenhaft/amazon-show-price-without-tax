@@ -8,7 +8,7 @@
         var oldHover = self.attr('title') || '';
         var earningAfterTax = (self.text().slice(1) - 0);
         self.attr({
-            title: oldHover + ' [ dealer will earn: $' + formatNumber(earningAfterTax) + ' ]'
+            title: oldHover + ' [ dealer will earn: $' + formatNumber(earningAfterTax) + ' after all fees ]'
         });
     });
 })(jQuery, 15);
