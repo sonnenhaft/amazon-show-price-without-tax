@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Amazon price without fees",
+  "name": "[Amazon] show price without fees",
   "description": "Hovering the price on amazon title will appear with money that dealer you (as a dealer) earn after amazon will minus its fee.",
   "version": "0.1",
   "icons": {
-    "16": "amazon-icon-with-piggy.png",
-    "48": "amazon-icon-with-piggy.png",
-    "128": "amazon-icon-with-piggy.png"
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "browser_action": {
-    "default_icon": "amazon-icon-with-piggy.png",
-    "default_popup": "index.html",
+    "default_icon": "icon.png",
+    "default_popup": "src/index.html",
     "default_title": "To see plugin in action please open amazon's page and move mouse on price."
   },
   "permissions": [
@@ -23,14 +23,14 @@
         "http://www.amazon.com/*"
       ],
       "js": [
-        "jquery-1.12.3.js",
-        "injectable-script-to-update-prices.js"
+        "src/jquery-1.12.3.js",
+        "src/injectable.js"
       ],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
-    "jquery-1.12.3.js",
-    "injectable-script-to-update-prices.js"
+    "src/jquery-1.12.3.js",
+    "src/injectable.js"
   ]
 }
