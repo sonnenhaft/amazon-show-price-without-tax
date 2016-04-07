@@ -20,9 +20,10 @@
                 .append($('<div>').css({
                     position: 'absolute',
                     color: 'green',
-                    top: '-5px',
-                    'font-size': '7px',
-                    'white-space': 'nowrap'
+                    top: '-8px',
+                    'font-size': '9px',
+                    'white-space': 'nowrap',
+                    'background': 'white'
                 }).text(title));
         }
     });
