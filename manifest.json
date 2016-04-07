@@ -3,8 +3,8 @@
   "name": "[Amazon] show price without fees",
   "short_name": "what I earn on amazon",
   "description": "Hovering the price on amazon title will appear with money that dealer you (as a dealer) earn after amazon will minus its fee.",
-  "version": "0.0.1",
-  "version_name": "0.0.1 alpha",
+  "version": "0.0.2",
+  "version_name": "0.0.2 alpha",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
