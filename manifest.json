@@ -1,12 +1,17 @@
 {
   "manifest_version": 2,
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
+  "name": "Amazon price without fees",
+  "description": "Hovering the price on amazon title will appear with money that dealer you (as a dealer) earn after amazon will minus its fee.",
+  "version": "0.1",
+  "icons": {
+    "16": "amazon-icon-with-piggy.png",
+    "48": "amazon-icon-with-piggy.png",
+    "128": "amazon-icon-with-piggy.png"
+  },
   "browser_action": {
     "default_icon": "amazon-icon-with-piggy.png",
-    "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_popup": "index.html",
+    "default_title": "To see plugin in action please open amazon's page and move mouse on price."
   },
   "permissions": [
     "activeTab"
