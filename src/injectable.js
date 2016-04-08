@@ -3,6 +3,15 @@
         return Math.round(number * (100 - taxPercent)) / 100;
     }
 
+    function getAsinInParent( element ) {
+        return (/asin=(.+)\&amp\;seller/.exec(element.closest('.olpOffer').html()) || [])[ 1 ];
+    }
+
+    function getSeller( element ) {
+        var x = element.closest('.olpOffer').html();
+        return ' seller: ' + (/seller=(.+)\&amp\;sshmPath/.exec(x) || [])[ 1 ];
+    }
+
     $('.a-color-price').each(function () {
         var self = $(this);
         var priceBeforeFee = $.trim(self.text()).replace(/[^\d\.\-]/g, '') - 0;
@@ -16,15 +25,16 @@
         if ( !isNaN(fullFee) ) {
             var title = '$' + fullFee;
             title += shippingBeforeFee ? ' (include shipping)' : '';
-            self.attr({ title: 'after 15% fee ' + title }).css({ position: 'relative' })
-                .append($('<div>').css({
-                    position: 'absolute',
-                    color: 'green',
-                    top: '-8px',
-                    'font-size': '9px',
-                    'white-space': 'nowrap',
-                    'background': 'white'
-                }).text(title));
+            //title += self.closest('[data-asin]').attr('data-asin') || getAsinInParent(self);
+            self.attr({ title: 'after 15% fee ' + title }).css({ position: 'relative' }).append($('<div>').css({
+                position: 'absolute',
+                color: 'green',
+                top: '-3px',
+                'font-size': '9px',
+                'line-height': '8px',
+                'white-space': 'nowrap',
+                'background': 'white'
+            }).text(title));
         }
     });
 })(jQuery, 15);
